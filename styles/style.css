@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html, body{
+    margin: 0;
+    box-sizing: border-box;
+}
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+article{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 40px 50px;
+}
+
+/* Header */
+
+header{
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 50px;
+    border-bottom: 2px solid rgb(199, 199, 199);
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+header h1{
+    font-size: 48px;
+}
+.about p{
+    font-size: 20px;
+}
+
+/* Main */
+
+h1, h2, h3{
+    font-weight: 400;
+}
+main h1{
+    font-weight: bold;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px 0;
+    border-bottom: 2px solid rgb(199, 199, 199);
+}
+ul{
+    list-style: none;
+}
+li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+li::before{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+main img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.lists h2{
+    margin-bottom: 10px;
+}
+
+/* Footer */
+
+footer{
+    padding-top: 50px;
+}
+footer h3{
+    color: gray;
+}
+
+/* Media */
+
+@media (max-width: 1030px){
+    article{
+        padding: 40px 50px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px){
+    article{
+        padding: 40px 15px;
+    }
+    header{
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .lists{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    h3{
+        font-size: 12px;
+    }
+    main h1{
+        font-size: 50px;
+    }
+    li{
+        font-size: 20px;
+    }
+    li::before{
+        content: "";
+        width: 9px;
+        height: 9px;
+    }
+    main h2{
+        font-size: 32px;
+    }
+}
